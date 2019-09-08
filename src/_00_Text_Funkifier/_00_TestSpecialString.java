@@ -38,6 +38,17 @@ public class _00_TestSpecialString {
 	//   the JUnitTest case below to test your customized Special String.
 	@Test
 	public void testCustomString() {
-	
+		String s = "This art thou a test";
+		Boolean works = true;
+		SpecialString rs = new JumbledString("This art thou a test");
+		System.out.println(rs);
+		for(int i = 0;i<20;i++) {
+			if(rs.toString().contains(s.substring(i,i+1))) {
+				
+			}else {
+				works = false;
+			}
+		}
+		assertEquals(works, true);
 	}
 }
